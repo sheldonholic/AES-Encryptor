@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Encrytped Password Generator</title>
+</head>
+
+<body>
+  <header>
+    <center><p>AES Password Encrytor</p></center>
+  </header>
+  <div id="grid">
+    <div id="grid-item">
+      <div id="container">
+        <input type="email" name="Email" id="email" placeholder="Enter your E-mail "><br><br>
+        <input type="password" name="password" id="password" placeholder="Enter password"><br><br>
+        <button type="submit" class="submit" id="submit" onclick="encrypt()">Encrypt</button>
+
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="container" style="height: 24vh;justify-content: center; align-items: center;padding-top: 10%;">
+        <label for="Encrypted Password" id="heading">Your AES Encrypted Password is :</label><br><br><br>
+        <label for="encryp" id="print">.</label><br><br>
+        <button type="reset" id="reset" class="submit" style="padding:10px 0px;width: 25%;margin-top: 10px;"
+          onclick="reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<!--Importing Library-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+  function encrypt() {
+    var password = document.getElementById("password").value;
+    var cipher = CryptoJS.AES.encrypt(password,"AESKEY");
+    cipher = cipher.toString();
+    document.getElementById('print').textContent = cipher;
+  }
+  function reset() {
+    document.getElementById('print').textContent = "";
+  }
+</script>
+
+</html>

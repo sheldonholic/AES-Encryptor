@@ -1,0 +1,77 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: linear-gradient(
+        115deg,
+        rgba(34, 34, 65, 0.10),
+        rgba(29, 29, 66, 0.9)
+      ),
+      url("https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MTk3MTc4NQ&ixlib=rb-1.2.1&q=85");
+     height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size:cover;
+    background-position: center;
+}
+header{
+    padding: 3rem 5rem;
+    color: white;
+}
+header p{
+    font-size: 3rem;
+    font-weight: bolder;
+    
+}
+#grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+}
+#container{
+    text-align: center;
+    align-content: center;
+    background-color: rgba(18, 18, 34, 0.788);
+    flex-basis: 100%;
+    padding: 50px 30px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 10px 10px 50px rgba(34, 121, 8, 0.966);
+}
+input{
+    background-color: rgba(18, 18, 34, 0.788);
+    text-decoration: none;
+    border-style: none;
+    width: 100%;
+    border-bottom: 1px double white;
+    color: white;
+    padding: 10px 0px 10px 0px;
+
+}
+label{
+    width: 100%;
+    color: white;
+    padding: 10px 0px 10px 0px;
+}
+.submit{
+    background-color: rgba(18, 18, 34, 0.788);
+    color:white;
+    border : 2px double #fff;
+    padding:10% ;
+    width:50%;
+    box-shadow: 5px 5px 10px #fff;
+    align-items: center;
+    padding:10px 0px;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 750px){
+    body{
+        overflow: auto;
+    }
+    #grid{
+        display: block;
+        margin-top:30%;
+    }
+}
